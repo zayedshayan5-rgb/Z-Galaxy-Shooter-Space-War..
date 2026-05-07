@@ -125,8 +125,8 @@
     const ctx = canvas.getContext('2d');
     
     // Global Constants
-    const EVO_TARGET = 1000;
-    const BOSS_TARGET = 1500;
+    const EVO_TARGET = 1500;
+    const BOSS_TARGET = 3000;
     const MAX_LVL = 6;
 
     // Game Variables
@@ -138,6 +138,11 @@
 
     // --- AUDIO ENGINE ---
     const Sfx = {
+        bgm: new Audio('skybound_pursuit.mp3'),
+        laser: new Audio('hull_breach.mp3'),
+        hit: new Audio('hull_breach_protocol.mp3'),
+        evo: new Audio('summit_reached.mp3'),
+        boss: new Audio('the_titan_s_descent.mp3'),
         boom: new Audio('titanium_hull_stress.mp3')
     };
     Sfx.bgm.loop = true;
@@ -407,5 +412,5 @@
     function run() { update(); render(); requestAnimationFrame(run); }
     init(); run();
     </script>
-   </body>
+</body>
 </html>
