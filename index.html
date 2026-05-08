@@ -431,6 +431,11 @@ rSfx(Sfx.boss);
  }, {passive: false});
  }
  function update() {
+  if(inLobby){
+
+return;
+
+  }
  if(!isLive) return;
  frames++; if(frames % 5 === 0) dist++;
  document.getElementById('dist-val').innerText = dist.toString().padStart(4, '0');
