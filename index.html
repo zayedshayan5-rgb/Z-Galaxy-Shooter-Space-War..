@@ -418,6 +418,15 @@ rSfx(Sfx.boss);
  document.getElementById('final-res').innerText = dist;
  }
  }
+  function startGame(){
+
+inLobby = false;
+
+document.getElementById(
+"play-btn"
+).style.display = "none";
+
+  }
  function resize() {
  w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight;
  Hero.x = Hero.tx = w / 2; Hero.y = Hero.ty = h - 160;
