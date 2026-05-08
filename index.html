@@ -431,6 +431,15 @@ document.getElementById(
  w = canvas.width = window.innerWidth; h = canvas.height = window.innerHeight;
  Hero.x = Hero.tx = w / 2; Hero.y = Hero.ty = h - 160;
  }
+  function startGame(){
+
+inLobby = false;
+
+document.getElementById(
+"play-btn"
+).style.display = "none";
+
+  }
  function init() {
  resize(); loadAssets();for(let i=0; i<120; i++) stars.push(new Star());
  window.addEventListener('resize', resize);
