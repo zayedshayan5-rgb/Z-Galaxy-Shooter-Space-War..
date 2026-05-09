@@ -148,7 +148,17 @@
     Sfx.bgm.loop = true;
     Sfx.bgm.volume = 0.4;
 
-    function triggerSfx(sound) {
+    function triggerSfx(sound){
+
+if(!sound) return;
+
+sound.pause();
+
+sound.currentTime = 0;
+
+sound.play().catch(()=>{});
+
+    }
         let n = sound.cloneNode();
         n.play().catch(() => {});
     }
