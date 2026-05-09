@@ -164,7 +164,9 @@ PLAY
     const MAX_LVL = 6;
 
     // Game Variables
-        let w, h, dist = 0, frames = 0, isLive = true, shake = 0; let zGold = 0;
+        let w, h, dist = 0, frames = 0, isLive = true, shake = 0; let zGold = localStorage.getItem("coins") 
+    ? parseInt(localStorage.getItem("coins")) 
+    : 0;
     let pLvl = 1, bLvl = 1, pHP = 100;
     
     // Entity Collections
