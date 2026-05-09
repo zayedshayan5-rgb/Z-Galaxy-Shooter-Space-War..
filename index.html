@@ -353,6 +353,7 @@ sound.play().catch(()=>{});
         if(!isLive) return;
         frames++; if(frames % 5 === 0) dist++;
         document.getElementById('dist-val').innerText = dist.toString().padStart(4, '0');
+        document.getElementById('coin-ui').innerText = zGold;
         
         checkGameProgress();
         stars.forEach(s => s.update());
