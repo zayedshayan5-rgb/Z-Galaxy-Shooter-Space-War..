@@ -665,6 +665,48 @@ function buyHPUpgrade(){
 
     }
 }
+
+        let coinLevel = 1;
+let coinMulti = 1;
+
+let coinPrice = 50;
+
+function buyCoinUpgrade(){
+
+    if(zGold >= coinPrice){
+
+        zGold -= coinPrice;
+
+        coinLevel++;
+
+        coinMulti++;
+
+        coinPrice *= 2;
+
+        localStorage.setItem("coins", zGold);
+
+        alert("COIN BOOST UPGRADED TO " + coinMulti + "x");
+
+        document.getElementById("coin-ui").innerText = zGold;
+
+        document.getElementById("lobby-coins").innerText =
+        "COINS: " + zGold;
+
+        document.getElementById("coin-title").innerText =
+        "💰 COIN BOOST LVL " + coinLevel;
+
+        document.getElementById("coin-bonus").innerText =
+        coinMulti + "x COINS";
+
+        document.getElementById("coin-price").innerText =
+        "PRICE: " + coinPrice.toLocaleString() + " COINS";
+
+    } else {
+
+        alert("NOT ENOUGH COINS!");
+
+    }
+}
         
         
     </script>
