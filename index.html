@@ -570,6 +570,73 @@ sound.play().catch(()=>{});
         function closeShop() {
     document.getElementById("shop-menu").style.display = "none";
 }
+
+        let hpLevel = 1;
+
+const hpData = [
+    {price:1000, hp:50},
+    {price:100000, hp:50},
+    {price:10000000, hp:50},
+    {price:100000000, hp:100},
+    {price:100000000000, hp:200}
+];
+
+function buyHPUpgrade(){
+
+    if(hpLevel > 5){
+        alert("MAX LEVEL REACHED!");
+        return;
+    }
+
+    let current = hpData[hpLevel - 1];
+
+    if(zGold >= current.price){
+
+        zGold -= current.price;
+
+        localStorage.setItem("coins", zGold);
+
+        alert("SUCCESS! +" + current.hp + " HP");
+
+        document.getElementById("coin-ui").innerText = zGold;
+
+        document.getElementById("lobby-coins").innerText =
+        "COINS: " + zGold;
+
+        hpLevel++;
+
+        if(hpLevel <= 5){
+
+            let next = hpData[hpLevel - 1];
+
+            document.getElementById("hp-title").innerText =
+            "❤️ HP UPGRADE LVL " + hpLevel;
+
+            document.getElementById("hp-bonus").innerText =
+            "+" + next.hp + " HP";
+
+            document.getElementById("hp-price").innerText =
+            "PRICE: " + next.price.toLocaleString() + " COINS";
+
+        } else {
+
+            document.getElementById("hp-title").innerText =
+            "MAX HP REACHED";
+
+            document.getElementById("hp-bonus").innerText =
+            "ULTIMATE POWER";
+
+            document.getElementById("hp-price").innerText =
+            "COMPLETED";
+        }
+
+    } else {
+
+        alert("NOT ENOUGH COINS!");
+
+    }
+}
+        
         
     </script>
 </body>
