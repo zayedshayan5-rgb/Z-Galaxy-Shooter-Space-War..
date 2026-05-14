@@ -404,6 +404,10 @@ sound.play().catch(()=>{});
 
     function init() {
         resize(); loadAssets();
+
+
+        document.querySelector("canvas").style.display = "none";
+        
         for(let i=0; i<120; i++) stars.push(new Star());
         window.addEventListener('resize', resize);
         window.addEventListener('touchmove', e => {
