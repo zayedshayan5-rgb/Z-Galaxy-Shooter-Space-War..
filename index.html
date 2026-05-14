@@ -485,7 +485,13 @@ sound.play().catch(()=>{});
     init(); run();
 
         function startGame() {
-    document.getElementById('lobby').style.display = 'none';
+    document.getElementById('lobby').style.display = 'none';function startGame() {
+    isLive = true;
+
+    document.getElementById("lobby").style.display = "none";
+
+    document.querySelector("canvas").style.display = "block";
+}
 }
         
     </script>
