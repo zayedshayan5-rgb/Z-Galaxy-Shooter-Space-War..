@@ -193,7 +193,7 @@ overflow-y:auto;
 
 <h1 style="color:#FFD700;">SHOP</h1>
 
-        <div style="
+        <div id="hp-upgrade-box" style="
 margin-top:20px;
 padding:20px;
 border:2px solid #00d2ff;
@@ -201,129 +201,26 @@ border-radius:15px;
 color:white;
 ">
 
-<h2>❤️ HP UPGRADE</h2>
+<h2 id="hp-title">❤️ HP UPGRADE LVL 1</h2>
 
-<p>LEVEL 1 → +50 HP</p>
+<p id="hp-bonus">+50 HP</p>
 
-<p>PRICE: 1,000 COINS</p>
+<p id="hp-price">PRICE: 1,000 COINS</p>
 
-<button style="
+<button onclick="buyHPUpgrade()" style="
 padding:10px 20px;
 background:#00d2ff;
 border:none;
 border-radius:10px;
 font-weight:bold;
+color:white;
+box-shadow:0 0 15px #00d2ff;
+cursor:pointer;
 ">
 BUY
 </button>
 
-</div>
-
-        <div style="
-margin-top:20px;
-padding:20px;
-border:2px solid #00d2ff;
-border-radius:15px;
-color:white;
-">
-
-<h2>❤️ HP UPGRADE LVL 2</h2>
-
-<p>+50 HP</p>
-
-<p>PRICE: 100,000 COINS</p>
-
-<button style="
-padding:10px 20px;
-background:#00d2ff;
-border:none;
-border-radius:10px;
-font-weight:bold;
-">
-BUY
-</button>
-
-</div>
-
-<div style="
-margin-top:20px;
-padding:20px;
-border:2px solid #00d2ff;
-border-radius:15px;
-color:white;
-">
-
-<h2>❤️ HP UPGRADE LVL 3</h2>
-
-<p>+50 HP</p>
-
-<p>PRICE: 10,000,000 COINS</p>
-
-<button style="
-padding:10px 20px;
-background:#00d2ff;
-border:none;
-border-radius:10px;
-font-weight:bold;
-">
-BUY
-</button>
-
-</div>
-
-        <div style="
-margin-top:20px;
-padding:20px;
-border:2px solid #ff0000;
-border-radius:15px;
-color:white;
-">
-
-<h2>🔥 HP UPGRADE LVL 4</h2>
-
-<p>+100 HP</p>
-
-<p>PRICE: 100,000,000 COINS</p>
-
-<button style="
-padding:10px 20px;
-background:red;
-border:none;
-border-radius:10px;
-font-weight:bold;
-color:white;
-">
-BUY
-</button>
-
-</div>
-
-<div style="
-margin-top:20px;
-padding:20px;
-border:2px solid #ff00ff;
-border-radius:15px;
-color:white;
-">
-
-<h2>☠️ HP UPGRADE LVL 5</h2>
-
-<p>+200 HP</p>
-
-<p>PRICE: 100,000,000,000 COINS</p>
-
-<button style="
-padding:10px 20px;
-background:#ff00ff;
-border:none;
-border-radius:10px;
-font-weight:bold;
-color:white;
-">
-BUY
-</button>
-
-</div>
+        </div>   
         
 <button onclick="closeShop()" style="
 margin-top:25px;
