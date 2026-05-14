@@ -530,7 +530,7 @@ sound.play().catch(()=>{});
                     e.hp -= b.dmg; pBullets.splice(i, 1);
                     explode(e.x, e.y, "#FF5722", 6);
                     if(e.hp <= 0) {
-                        zGold += 1;
+                        zGold += coinMulti;
                         localStorage.setItem("coins", zGold);
                         enemies.splice(ei, 1); triggerSfx(Sfx.boom);
                         explode(e.x, e.y, "#FFD700", 25);
