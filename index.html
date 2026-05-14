@@ -257,7 +257,7 @@ CLOSE
     const MAX_LVL = 6;
 
     // Game Variables
-        let w, h, dist = 0, frames = 0, isLive = true, shake = 0; let zGold = localStorage.getItem("coins") 
+        let w, h, dist = 0, frames = 0, isLive = false, shake = 0; let zGold = localStorage.getItem("coins") 
     ? parseInt(localStorage.getItem("coins")) 
     : 0;
         document.getElementById("lobby-coins").innerText = "COINS: " + zGold;
