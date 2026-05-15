@@ -291,7 +291,16 @@ CLOSE
     : 0;
         document.getElementById("lobby-coins").innerText = "COINS: " + zGold;
     let pLvl = 1, bLvl = 1, pHP = 100;
-    
+
+let coinLevel =
+parseInt(localStorage.getItem("coinLevel")) || 1;
+
+let coinMulti =
+parseInt(localStorage.getItem("coinMulti")) || 2;
+
+let coinPrice =
+parseInt(localStorage.getItem("coinPrice")) || 50;
+        
     // Entity Collections
     let stars = [], particles = [], pBullets = [], eBullets = [], enemies = [], activeBoss = null;
 
