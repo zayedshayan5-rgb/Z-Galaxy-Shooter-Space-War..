@@ -698,6 +698,12 @@ function buyCoinUpgrade(){
 
         coinPrice *= 2;
 
+localStorage.setItem("coinMulti", coinMulti);
+
+localStorage.setItem("coinLevel", coinLevel);
+
+localStorage.setItem("coinPrice", coinPrice);
+        
         localStorage.setItem("coins", zGold);
 
         alert("COIN BOOST UPGRADED TO " + coinMulti + "x");
